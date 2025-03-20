@@ -1,0 +1,42 @@
+<svg width="450" height="500" viewBox="0 0 450 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_6)">
+<rect width="450" height="500" fill="#2F2F2F"/>
+<g filter="url(#filter0_f_1_6)">
+<circle cx="-97" cy="-90" r="150" fill="#1BA970"/>
+</g>
+<g filter="url(#filter1_f_1_6)">
+<circle cx="588" cy="-63" r="150" fill="#1BA970"/>
+</g>
+<g filter="url(#filter2_f_1_6)">
+<circle cx="-108" cy="608" r="150" fill="#1BA970"/>
+</g>
+<g filter="url(#filter3_f_1_6)">
+<circle cx="577" cy="635" r="150" fill="#1BA970"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_1_6" x="-447" y="-440" width="700" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_1_6"/>
+</filter>
+<filter id="filter1_f_1_6" x="238" y="-413" width="700" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_1_6"/>
+</filter>
+<filter id="filter2_f_1_6" x="-458" y="258" width="700" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_1_6"/>
+</filter>
+<filter id="filter3_f_1_6" x="227" y="285" width="700" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_1_6"/>
+</filter>
+<clipPath id="clip0_1_6">
+<rect width="450" height="500" fill="white"/>
+</clipPath>
+</defs>
+</svg>

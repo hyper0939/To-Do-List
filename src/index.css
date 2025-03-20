@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
+* {
+    overflow: hidden;
+    outline: none;
+}
+
+/* Main */
+.Bg {
+    position: fixed;
+    display: flex;
+}
+
+.Title {
+    position: fixed;
+    display: flex;
+    width: 448px;
+    height: 26px;
+    top: 0.5em;
+    justify-content: center;
+
+    font-family: "Sansita", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.ListBG {
+    position: fixed;
+    display: flex;
+    width: 400px;
+    height: 430px;
+    left: 2em;
+    top: 4em;
+
+    transition: 200ms;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px
+}
+
+.ListBg {
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 100px;
+
+    animation-duration: 1s;
+
+    background: rgba(217, 217, 217, 0.1);
+}
+
+.Remove {
+    position: absolute;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    right: 0.5em;
+    top: 0.5em;
+    animation-duration: 1s;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    background: linear-gradient(224deg, rgba(80, 9, 9, 0.5) 0%, rgba(182, 20, 20, 0.5) 50%, rgba(80, 9, 9, 0.5) 100%);
+    border: 1px solid rgba(80, 9, 9, 0.5);
+
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.Remove:hover {
+    transition: 200ms;
+    transform: scale(1.05);
+    background: linear-gradient(224deg, rgba(80, 9, 9, 1) 0%, rgba(182, 20, 20, 1) 50%, rgba(80, 9, 9, 0.5) 100%);
+    border: 1px solid rgba(80, 9, 9, 1);
+}
+
+.Remove:active {
+    transform: scale(.7);
+}
+
+
+.TitleInput {
+    position: absolute;
+    display: flex;
+    width: 359px;
+    height: 27px;
+    top: 0.1em;
+    left: 0.2em;
+    background: transparent;
+    border: transparent;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.MessageInput {
+    position: absolute;
+    display: flex;
+    width: 350px;
+    height: 62px;
+    top: 2.8em;
+    left: 0.2em;
+    background: transparent;
+    border: transparent;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.Create {
+    position: fixed;
+    display: flex;
+    width: 75px;
+    height: 25px;
+    left: 2.7em;
+    top: 2em;
+
+    align-items: center;
+    justify-content: center;
+    transition: 200ms;
+    cursor: pointer;;
+
+    background: rgba(217, 217, 217, 0.15);
+    border: 1px solid rgba(217, 217, 217, 0.15);
+
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.Create:hover {
+    transition: 200ms;
+    width: 80px;
+    height: 30px;
+}
+
+.Create:active {
+    width: 75px;
+    height: 25px;
+}
+
+.neon-checkbox {
+    --primary: #00ffaa;
+    --primary-dark: #00cc88;
+    --primary-light: #88ffdd;
+    --size: 30px;
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    left: 91%;
+    top: 52%;
+}
+
+.neon-checkbox input {
+    display: none;
+}
+
+.neon-checkbox__frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.neon-checkbox__box {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    border: 2px solid var(--primary-dark);
+    transition: all 0.4s ease;
+}
+
+.neon-checkbox__check-container {
+    position: absolute;
+    inset: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neon-checkbox__check {
+    width: 80%;
+    height: 80%;
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+    transform-origin: center;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neon-checkbox__glow {
+    position: absolute;
+    inset: -2px;
+    border-radius: 6px;
+    background: var(--primary);
+    opacity: 0;
+    filter: blur(8px);
+    transform: scale(1.2);
+    transition: all 0.4s ease;
+}
+
+.neon-checkbox__borders {
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.neon-checkbox__borders span {
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background: var(--primary);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.neon-checkbox__borders span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    animation: borderFlow1 2s linear infinite;
+}
+
+.neon-checkbox__borders span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 1px;
+    height: 40px;
+    animation: borderFlow2 2s linear infinite;
+}
+
+.neon-checkbox__borders span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    animation: borderFlow3 2s linear infinite;
+}
+
+.neon-checkbox__borders span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 1px;
+    height: 40px;
+    animation: borderFlow4 2s linear infinite;
+}
+
+.neon-checkbox__particles span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 6px var(--primary);
+}
+
+.neon-checkbox__rings {
+    position: absolute;
+    inset: -20px;
+    pointer-events: none;
+}
+
+.neon-checkbox__rings .ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+    opacity: 0;
+    transform: scale(0);
+}
+
+.neon-checkbox__sparks span {
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    opacity: 0;
+}
+
+.neon-checkbox:hover .neon-checkbox__box {
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__box {
+    border-color: var(--primary);
+    background: rgba(0, 255, 170, 0.1);
+}
+
+.neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__check {
+    stroke-dashoffset: 0;
+    transform: scale(1.1);
+}
+
+.neon-checkbox input:checked ~ .neon-checkbox__frame .neon-checkbox__glow {
+    opacity: 0.2;
+}
+
+.neon-checkbox
+    input:checked
+    ~ .neon-checkbox__frame
+    .neon-checkbox__borders
+    span {
+    opacity: 1;
+}
+
+.neon-checkbox
+    input:checked
+    ~ .neon-checkbox__frame
+    .neon-checkbox__particles
+    span {
+    animation: particleExplosion 0.6s ease-out forwards;
+}
+
+.neon-checkbox
+    input:checked
+    ~ .neon-checkbox__frame
+    .neon-checkbox__rings
+    .ring {
+    animation: ringPulse 0.6s ease-out forwards;
+}
+
+.neon-checkbox
+    input:checked
+    ~ .neon-checkbox__frame
+    .neon-checkbox__sparks
+    span {
+    animation: sparkFlash 0.6s ease-out forwards;
+}
+
+@keyframes borderFlow1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(200%);
+    }
+}
+
+@keyframes borderFlow2 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(200%);
+    }
+}
+
+@keyframes borderFlow3 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes borderFlow4 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes particleExplosion {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(
+            calc(-50% + var(--x, 20px)),
+            calc(-50% + var(--y, 20px))
+        )
+        scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes ringPulse {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkFlash {
+    0% {
+        transform: rotate(var(--r, 0deg)) translateX(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(var(--r, 0deg)) translateX(30px) scale(0);
+        opacity: 0;
+    }
+}
+
+.neon-checkbox__particles span:nth-child(1) {
+    --x: 25px;
+    --y: -25px;
+}
+
+.neon-checkbox__particles span:nth-child(2) {
+    --x: -25px;
+    --y: -25px;
+}
+
+.neon-checkbox__particles span:nth-child(3) {
+    --x: 25px;
+    --y: 25px;
+}
+
+.neon-checkbox__particles span:nth-child(4) {
+    --x: -25px;
+    --y: 25px;
+}
+
+.neon-checkbox__particles span:nth-child(5) {
+    --x: 35px;
+    --y: 0px;
+}
+
+.neon-checkbox__particles span:nth-child(6) {
+    --x: -35px;
+    --y: 0px;
+}
+
+.neon-checkbox__particles span:nth-child(7) {
+    --x: 0px;
+    --y: 35px;
+}
+
+.neon-checkbox__particles span:nth-child(8) {
+    --x: 0px;
+    --y: -35px;
+}
+
+.neon-checkbox__particles span:nth-child(9) {
+    --x: 20px;
+    --y: -30px;
+}
+
+.neon-checkbox__particles span:nth-child(10) {
+    --x: -20px;
+    --y: 30px;
+}
+
+.neon-checkbox__particles span:nth-child(11) {
+    --x: 30px;
+    --y: 20px;
+}
+
+.neon-checkbox__particles span:nth-child(12) {
+    --x: -30px;
+    --y: -20px;
+}
+
+.neon-checkbox__sparks span:nth-child(1) {
+    --r: 0deg;
+    top: 50%;
+    left: 50%;
+}
+
+.neon-checkbox__sparks span:nth-child(2) {
+    --r: 90deg;
+    top: 50%;
+    left: 50%;
+}
+
+.neon-checkbox__sparks span:nth-child(3) {
+    --r: 180deg;
+    top: 50%;
+    left: 50%;
+}
+
+.neon-checkbox__sparks span:nth-child(4) {
+    --r: 270deg;
+    top: 50%;
+    left: 50%;
+}
+
+.neon-checkbox__rings .ring:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.neon-checkbox__rings .ring:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.neon-checkbox__rings .ring:nth-child(3) {
+    animation-delay: 0.2s;
+}
+/* Main */
+
+/* Scrollbar */
+.ListBG::-webkit-scrollbar {
+    width: 1px;
+}
+
+.ListBG::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    border-radius: 1px;
+}
+
+.ListBG::-webkit-scrollbar-thumb {
+    background: #7be05d;
+    border-radius: 1px;
+}
+
+.ListBG::-webkit-scrollbar-thumb:hover {
+    background: #7be05d;
+}
+/* Scrollbar */
+
+/* Animatio */
+@keyframes Down {
+    0% {
+        top: 0vh;
+    }
+    100% {
+        top: -20vh;
+    }
+}
+
+@keyframes Up {
+    0% {
+        bottom: 25vh;
+    }
+    100% {
+        bottom: 0vh;
+    }
+}
