@@ -16,12 +16,13 @@ function addTaskToUI(id, titleText, messageText, marked) {
     const listContainer = document.querySelector(".ListBG");
     const newTask = document.createElement("div");
     newTask.classList.add("ListBg");
-    newTask.style.animation = "Up 1s ease-out";
+    newTask.style.animation = "Up .2s ease-out";
 
     newTask.innerHTML = `
-        <button class="Remove">X</button>
+        <button class="Remove"> <span>X</span> </button>
         <input placeholder="Title..." class="TitleInput" value="${titleText}">
         <input placeholder="Message..." class="MessageInput" value="${messageText}">
+        <div class="Line"></div>
         <label class="neon-checkbox">
             <input type="checkbox" class="TaskCheckbox" ${marked ? "checked" : ""}/>
             <div class="neon-checkbox__frame">
@@ -71,19 +72,24 @@ function addTaskToUI(id, titleText, messageText, marked) {
     });
 
     newTask.querySelector(".Remove").addEventListener("click", () => {
-        newTask.style.animation = "Down 1s";
+        newTask.style.animation = "Down .3s";
         setTimeout(() => {
             newTask.remove();
             ipcRenderer.send("deleteTodo", id);
-        }, 1000);
+        }, 300);
     });
 }
 
 document.querySelector(".Create").addEventListener("click", () => {
-    const title = "Neue Notiz";
-    const message = "Beschreibung eingeben...";
+    const title = "";
+    const message = "";
     
     ipcRenderer.invoke("addTodo", { title, message, marked: false }).then(id => {
         addTaskToUI(id, title, message, false);
     });
+});
+
+document.querySelector(".RemoveAll").addEventListener("click", () => {
+    ipcRenderer.send("removeAllTodo");
+    document.querySelector(".ListBG").innerHTML = "";
 });
