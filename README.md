@@ -2,8 +2,7 @@
 
 A sleek and modern to-do list application built with Electron.
 
-<img width="450" height="556" alt="Screenshot 2025-12-31 191702" src="https://github.com/user-attachments/assets/7ba8d64d-1f9a-45ae-91a1-0312f9889357" />
-
+<img width="448" height="555" alt="image" src="https://github.com/user-attachments/assets/a45d630b-5447-47bd-b996-37c2d08fdb56" />
 
 ## Features
 
