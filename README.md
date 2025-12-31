@@ -2,7 +2,8 @@
 
 A sleek and modern to-do list application built with Electron.
 
-![To-Do List App](https://i.imgur.com/VCYCiBx.png)
+<img width="450" height="556" alt="Screenshot 2025-12-31 191702" src="https://github.com/user-attachments/assets/7ba8d64d-1f9a-45ae-91a1-0312f9889357" />
+
 
 ## Features
 
@@ -21,8 +22,8 @@ A sleek and modern to-do list application built with Electron.
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/to-do-list.git
-   cd to-do-list
+   git clone https://github.com/hyper0939/To-Do-List.git
+   cd To-Do-List
    ```
 
 2. Install dependencies:
