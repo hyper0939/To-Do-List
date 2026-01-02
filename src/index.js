@@ -18,10 +18,10 @@ const db = new sqlite3.Database(dbPath, (err) => {
 db.serialize(() => {
     db.run(`
         CREATE TABLE IF NOT EXISTS todos (
-            id INTERGER PRIMARY KEY AUTOINCREMENT,
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT NOT NULL,
             message TEXT NOT NULL,
-            marked INTERGER DEFAULT 0
+            marked INTEGER DEFAULT 0
         )
     `, (err) => {
         if (err) console.error("Table creation failed:", err.message);

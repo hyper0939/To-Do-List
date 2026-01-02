@@ -12,6 +12,14 @@ async function loadTodos() {
     });
 }
 
+function deboucne(fn, delay = 300) {
+    let t;
+    return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...args), delay);
+    };
+}
+
 function addTaskToUI(id, titleText, messageText, marked) {
     const listContainer = document.querySelector(".ListBG");
     const newTask = document.createElement("div");
@@ -58,6 +66,23 @@ function addTaskToUI(id, titleText, messageText, marked) {
 
     listContainer.appendChild(newTask);
 
+    const titleInput = newTask.querySelector(".TitleInput");
+    const messageInput = newTask.querySelector(".MessageInput");
+    const checkbox = newTask.querySelector(".TaskCheckbox");
+
+    const update = deboucne(() => {
+        ipcRenderer.send("updateTodo", {
+            id,
+            title: titleInput.value,
+            message: messageInput.value,
+            marked: checkbox.checked
+        });
+    }, 300);
+
+    titleInput.addEventListener("input", update);
+    messageInput.addEventListener("input", update);
+    checkbox.addEventListener("change", update);
+
     newTask.querySelector(".TitleInput").addEventListener("input", (e) => {
         ipcRenderer.send("updateTodo", { id, title: e.target.value, message: messageText, marked });
     });
@@ -74,8 +99,8 @@ function addTaskToUI(id, titleText, messageText, marked) {
     newTask.querySelector(".Remove").addEventListener("click", () => {
         newTask.style.animation = "Down .3s";
         setTimeout(() => {
-            newTask.remove();
             ipcRenderer.send("deleteTodo", id);
+            newTask.remove();
         }, 300);
     });
 }
